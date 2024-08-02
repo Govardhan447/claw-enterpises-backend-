@@ -1,0 +1,58 @@
+GET http://localhost:3000/todos/
+
+###
+
+GET http://localhost:3000/todos/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdvdmFyZGhhbjEyMyIsImlhdCI6MTcyMjUyMTczOH0.GkZ17FM6GS3ApdNn7hxD2hMF5E9XXAeK8wJyvnPDoXI
+
+###
+
+POST http://localhost:3000/user/
+Content-Type: application/json
+
+{   "id":1, 
+    "username": "govardhan123",
+    "password": "govardhan@123"
+    
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+   "username": "govardhan123",
+   "password": "govardhan@123"
+    
+}
+
+###
+
+POST http://localhost:3000/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdvdmFyZGhhbjEyMyIsImlhdCI6MTcyMjUyMTczOH0.GkZ17FM6GS3ApdNn7hxD2hMF5E9XXAeK8wJyvnPDoXI
+Content-Type: application/json
+
+{   "id":2, 
+    "user_id":2,
+    "description":"todos item of descriptions are representing to ot item of value",
+    "status":"good"
+}
+
+###
+
+PUT http://localhost:3000/todos/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdvdmFyZGhhbjEyMyIsImlhdCI6MTcyMjUyMTczOH0.GkZ17FM6GS3ApdNn7hxD2hMF5E9XXAeK8wJyvnPDoXI
+Content-Type: application/json 
+
+{    
+    "description":"Item of descriptions are representing to ot item of value and its an container details of item",
+    "status":"good"
+}
+
+###
+
+DELETE http://localhost:3000/todos/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdvdmFyZGhhbjEyMyIsImlhdCI6MTcyMjUyMTczOH0.GkZ17FM6GS3ApdNn7hxD2hMF5E9XXAeK8wJyvnPDoXI
+
+###
